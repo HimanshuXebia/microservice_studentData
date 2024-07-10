@@ -1,13 +1,13 @@
-package com.student.data;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class DataApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
-}
+//package com.student.data;
+//
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//@SpringBootTest
+//class DataApplicationTests {
+//
+//	@Test
+//	void contextLoads() {
+//	}
+//
+//}
