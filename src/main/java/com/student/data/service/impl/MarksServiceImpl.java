@@ -18,15 +18,15 @@ import com.opencsv.bean.HeaderColumnNameTranslateMappingStrategy;
 import com.student.data.dao.StudentMarksRepository;
 import com.student.data.entity.StudentMarks;
 import com.student.data.request.MarksDto;
-import com.student.data.service.UploadStudentMarksService;
+import com.student.data.service.MarksService;
 
 @Service
-public class UploadStudentMarksServiceImpl implements UploadStudentMarksService {
+public class MarksServiceImpl implements MarksService {
 
 	private final StudentMarksRepository studentMarksRepository;
 	
 	@Autowired
-	public UploadStudentMarksServiceImpl(StudentMarksRepository studentMarksRepository) {
+	public MarksServiceImpl(StudentMarksRepository studentMarksRepository) {
 		this.studentMarksRepository = studentMarksRepository;
 	}
 
@@ -60,6 +60,13 @@ public class UploadStudentMarksServiceImpl implements UploadStudentMarksService 
         }
         
         return "Students marks from csv have been dumped to db";
+	}
+
+
+
+	@Override
+	public List<StudentMarks> getStudentMarks() {
+		return studentMarksRepository.findAll();
 	}
 
 }
